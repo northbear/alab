@@ -9,8 +9,8 @@ pipeline {
         stage('Pull The Task') {
             steps {
                 echo "Pull The Task"
-                echo sh(returnStdout: true, script: "python --version").trim()
-                echo sh(returnStdout: true, script: "git --version").trim()
+                sh "python --version"
+                sh "git --version"
             }
         }
         stage('Execute The Task') {
