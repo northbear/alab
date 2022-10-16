@@ -11,8 +11,8 @@ RUN apt-get update && \
 COPY ./plugins.txt /usr/share/jenkins/plugins.txt
 RUN jenkins-plugin-cli --verbose -f /usr/share/jenkins/plugins.txt
 
-ENV JENKINS_USER admin
-ENV JENKINS_PASS !Q2w3e4r
+ENV ADMIN_USER admin
+ENV ADMIN_PASS !Q2w3e4r
 
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
 

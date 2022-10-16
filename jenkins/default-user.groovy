@@ -12,8 +12,8 @@ if(!(jenkins.getAuthorizationStrategy() instanceof GlobalMatrixAuthorizationStra
 
 // create new Jenkins user account
 // username & password from environment variables
-def user = jenkins.getSecurityRealm().createAccount(env.JENKINS_USER, env.JENKINS_PASS)
+def user = jenkins.getSecurityRealm().createAccount(env.ADMIN_USER, env.ADMIN_PASS)
 user.save()
-jenkins.getAuthorizationStrategy().add(Jenkins.ADMINISTER, env.JENKINS_USER)
+jenkins.getAuthorizationStrategy().add(Jenkins.ADMINISTER, env.ADMIN_USER)
 
 jenkins.save()
