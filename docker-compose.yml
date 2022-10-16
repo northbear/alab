@@ -1,8 +1,9 @@
 version: '3.7'
 services:
   jenkins:
-#    image: jenkins/jenkins:lts
     image: jenkins-alab:0.1
+    build:
+      context: ./jenkins
     privileged: true
     user: root
     ports:
